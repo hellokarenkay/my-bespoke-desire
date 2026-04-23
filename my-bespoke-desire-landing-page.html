@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bespoke Desire - Bespoke Erotic Fiction</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: #0a0a0a;
+            color: #e8e8e8;
+            line-height: 1.8;
+            letter-spacing: 0.3px;
+        }
+
+        /* Navigation */
+        nav {
+            background: rgba(10, 10, 10, 0.95);
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(139, 69, 69, 0.2);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav .logo {
+            font-size: 22px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            color: #d4af37;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 40px;
+        }
+
+        nav a {
+            color: #e8e8e8;
+            text-decoration: none;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(20, 10, 10, 0.9) 0%, rgba(30, 15, 15, 0.95) 100%);
+            padding: 200px 40px 100px;
+            text-align: center;
+            margin-top: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.05) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 300;
+            margin-bottom: 20px;
+            color: #f0f0f0;
+            letter-spacing: 1px;
+        }
+
+        .hero .subheading {
+            font-size: 20px;
+            color: #c9a961;
+            margin-bottom: 30px;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+        .hero p {
+            font-size: 16px;
+            color: #d0d0d0;
+            margin-bottom: 40px;
+            line-height: 1.8;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* CTA Button */
+        .btn {
+            display: inline-block;
+            padding: 16px 40px;
+            background: linear-gradient(135deg, #8b4545 0%, #6b3535 100%);
+            color: #f0f0f0;
+            text-decoration: none;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            transition: all 0.3s;
+            border: 1px solid #d4af37;
+            cursor: pointer;
+            font-family: 'Georgia', serif;
+        }
+
+        .btn:hover {
+            background: linear-gradient(135deg, #a55555 0%, #8b4545 100%);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 1px solid #d4af37;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(212, 175, 55, 0.1);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 100px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-top: 60px;
+        }
+
+        .service-card {
+            background: rgba(30, 15, 15, 0.6);
+            padding: 50px 40px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #d4af37, transparent);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .service-card:hover {
+            background: rgba(40, 20, 20, 0.8);
+            border-color: rgba(212, 175, 55, 0.4);
+        }
+
+        .service-card:hover::before {
+            opacity: 1;
+        }
+
+        .service-card h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #f0f0f0;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+
+        .service-card p {
+            font-size: 15px;
+            color: #d0d0d0;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        .pricing {
+            font-size: 16px;
+            color: #c9a961;
+            margin-bottom: 30px;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+        }
+
+        .includes {
+            background: rgba(212, 175, 55, 0.05);
+            padding: 20px;
+            border-left: 2px solid #d4af37;
+            margin-bottom: 30px;
+            font-size: 13px;
+            color: #d0d0d0;
+            line-height: 1.8;
+        }
+
+        .includes li {
+            list-style: none;
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .includes li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: #d4af37;
+        }
+
+        /* Newsletter Section */
+        .newsletter {
+            background: linear-gradient(135deg, rgba(20, 10, 10, 0.8) 0%, rgba(40, 20, 20, 0.6) 100%);
+            padding: 80px 40px;
+            text-align: center;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .newsletter-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .newsletter h2 {
+            font-size: 42px;
+            margin-bottom: 30px;
+            color: #f0f0f0;
+            font-weight: 300;
+        }
+
+        .newsletter p {
+            font-size: 16px;
+            color: #d0d0d0;
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .newsletter-form input {
+            padding: 14px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid #d4af37;
+            color: #f0f0f0;
+            font-size: 14px;
+            width: 300px;
+            font-family: 'Georgia', serif;
+        }
+
+        .newsletter-form input::placeholder {
+            color: #999;
+        }
+
+        .newsletter-form input:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+        }
+
+        .substack-link {
+            color: #c9a961;
+            text-decoration: none;
+            font-style: italic;
+            transition: color 0.3s;
+        }
+
+        .substack-link:hover {
+            color: #d4af37;
+        }
+
+        /* About Section */
+        .about {
+            padding: 100px 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .about h2 {
+            font-size: 42px;
+            margin-bottom: 50px;
+            color: #f0f0f0;
+            font-weight: 300;
+            text-align: center;
+        }
+
+        .process {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-top: 60px;
+        }
+
+        .process h3 {
+            font-size: 24px;
+            margin-bottom: 30px;
+            color: #c9a961;
+            font-weight: 300;
+        }
+
+        .process ol {
+            list-style: none;
+            counter-reset: step-counter;
+        }
+
+        .process li {
+            counter-increment: step-counter;
+            margin-bottom: 30px;
+            padding-left: 50px;
+            position: relative;
+            color: #d0d0d0;
+            line-height: 1.8;
+        }
+
+        .process li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            width: 35px;
+            height: 35px;
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid #d4af37;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #c9a961;
+            font-weight: 500;
+        }
+
+        .philosophy {
+            grid-column: 1 / -1;
+            background: rgba(212, 175, 55, 0.05);
+            padding: 40px;
+            border-left: 2px solid #d4af37;
+            color: #d0d0d0;
+            line-height: 1.8;
+            margin-top: 40px;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, rgba(20, 10, 10, 0.9) 0%, rgba(30, 15, 15, 0.95) 100%);
+            padding: 80px 40px;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .contact-content {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: #f0f0f0;
+            font-weight: 300;
+        }
+
+        .contact p {
+            color: #d0d0d0;
+            margin-bottom: 40px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #c9a961;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid #d4af37;
+            color: #f0f0f0;
+            font-family: 'Georgia', serif;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-group select {
+            cursor: pointer;
+        }
+
+        .form-group option {
+            background: #1a1a1a;
+            color: #f0f0f0;
+        }
+
+        .form-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 40px;
+            justify-content: center;
+        }
+
+        /* Footer */
+        footer {
+            background: #000;
+            padding: 40px;
+            text-align: center;
+            color: #888;
+            font-size: 13px;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        footer a {
+            color: #c9a961;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #d4af37;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            .hero {
+                padding: 120px 20px 60px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero .subheading {
+                font-size: 16px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .process {
+                grid-template-columns: 1fr;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .newsletter-form input {
+                width: 100%;
+            }
+
+            .form-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .service-card {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+
+        .service-card:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">My Bespoke Desire</div>
+        <ul>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#newsletter">Newsletter</a></li>
+            <li><a href="#about">How It Works</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Your Intimate Story. Written for You.</h1>
+            <p class="subheading">Bespoke erotic fiction where you're the protagonist. Luxuriously crafted, deeply personal, entirely yours.</p>
+            <p>We craft the fantasies you've always wanted to experience. Whether it's an intimate moment with your partner or a fantasy born from self-love, every story is written expressly for you. Intelligent. Bold. Elegant. Just for your eyes.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div style="text-align: center; margin-bottom: 40px;">
+            <h2 style="font-size: 42px; color: #f0f0f0; font-weight: 300; margin-bottom: 15px;">Commission Your Story</h2>
+            <p style="color: #d0d0d0; font-size: 16px; max-width: 700px; margin: 0 auto;">Imagine reading a story written entirely around you. Around your desires. Around your most intimate moments with someone you love. We create bespoke erotic fiction tailored to you—a gift for yourself, or an unforgettable surprise for your partner.</p>
+        </div>
+
+        <div class="services-grid">
+            <!-- Bespoke Story Card -->
+            <div class="service-card">
+                <h3>Your Fantasy, Professionally Written</h3>
+                <p>Tell us about your desires, your partner, your deepest fantasies. Through a thoughtful questionnaire, we gather the intimate details that make your story uniquely <em>yours</em>. The result: a beautifully crafted, two-page erotic narrative featuring you as the protagonist.</p>
+                <div class="pricing">An investment in your intimate moments: <strong>$850</strong></div>
+                <div class="includes">
+                    <strong style="color: #d4af37;">What's Included:</strong>
+                    <ul>
+                        <li>Personalized questionnaire (10-15 questions)</li>
+                        <li>Two-page bespoke story featuring you</li>
+                        <li>Direct communication with the writer</li>
+                        <li>One round of revisions</li>
+                        <li>Private delivery</li>
+                    </ul>
+                </div>
+                <button class="btn" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' }); document.getElementById('service-type').value = 'bespoke';">Commission Your Story</button>
+            </div>
+
+            <!-- Russian Roulette Card -->
+            <div class="service-card">
+                <h3>A Surprise Story. Entirely Unexpected.</h3>
+                <p>Want erotic fiction written <em>for</em> you, but prefer the thrill of surprise? Tell us your general preferences, your orientation, your boundaries—and we'll create a story you didn't know you needed. A mystery. An adventure. A delightful surprise.</p>
+                <div class="pricing">The thrill of the unknown: <strong>$550</strong></div>
+                <div class="includes">
+                    <strong style="color: #d4af37;">What's Included:</strong>
+                    <ul>
+                        <li>Brief preference questionnaire</li>
+                        <li>One surprise erotic story (1-2 pages)</li>
+                        <li>Our creative choice on the scenario</li>
+                        <li>Private delivery</li>
+                    </ul>
+                </div>
+                <button class="btn" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' }); document.getElementById('service-type').value = 'surprise';">Order Your Surprise</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section id="newsletter" class="newsletter">
+        <div class="newsletter-content">
+            <h2>Weekly Erotic Stories. In Your Inbox.</h2>
+            <p>Each week, we publish a new erotic story on our Substack. Short. Classy. Intelligent. The stories aren't gender-specific—they celebrate desire in all its forms: cis, bisexual, homosexual, queer. Each story unfolds over multiple emails, one part at a time, so you have something to anticipate.</p>
+            <p><strong>Sign up for free. Read for free. Discover what moves you.</strong></p>
+
+            <div class="newsletter-form">
+                <input type="email" placeholder="Enter your email address" required>
+                <button class="btn">Subscribe</button>
+            </div>
+
+            <p style="font-size: 14px; color: #aaa;">Or <a href="https://substack.com" target="_blank" class="substack-link">read this week's story on Substack →</a></p>
+        </div>
+    </section>
+
+    <!-- About / How It Works Section -->
+    <section id="about" class="about">
+        <h2>How It Works</h2>
+
+        <div class="process">
+            <div>
+                <h3>For the Bespoke Story</h3>
+                <ol>
+                    <li>You fill out a thoughtful questionnaire about your desires, your partner, and what intimate moments matter most to you.</li>
+                    <li>We write. Carefully. Thoughtfully. With intelligence and elegance.</li>
+                    <li>You receive your story—a beautiful, private narrative written only for you.</li>
+                </ol>
+            </div>
+
+            <div>
+                <h3>For the Russian Roulette</h3>
+                <ol>
+                    <li>You tell us your preferences and boundaries in a brief form.</li>
+                    <li>We surprise you with a story crafted to delight and excite.</li>
+                    <li>You discover what we've written, just for you.</li>
+                </ol>
+            </div>
+
+            <div class="philosophy">
+                <strong style="color: #d4af37; font-size: 16px; display: block; margin-bottom: 15px;">Our Philosophy</strong>
+                <p>Every story is an act of intimacy. Whether it's a fantasy you've always had, or a surprise we create for you, the goal is the same: to bring joy, excitement, and a sense of being <em>truly seen</em> through beautifully written erotic fiction.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Order Section -->
+    <section id="contact" class="contact">
+        <div class="contact-content">
+            <h2>Ready to Commission Your Story?</h2>
+            <p>Whether you want a custom narrative or a delightful surprise, we're here to create an intimate experience written expressly for you.</p>
+
+            <form onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <label for="service-type">I'm interested in:</label>
+                    <select id="service-type" required>
+                        <option value="">-- Select an option --</option>
+                        <option value="bespoke">The Bespoke Story ($850)</option>
+                        <option value="surprise">Russian Roulette - Surprise Story ($550)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="client-type">Who is this for?</label>
+                    <select id="client-type" required>
+                        <option value="">-- Select an option --</option>
+                        <option value="couple">Myself and my partner</option>
+                        <option value="single">Myself (exploring, self-love, or fantasy)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Tell us a bit about what you're looking for (optional)</label>
+                    <textarea id="message"></textarea>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="submit" class="btn">Get Started</button>
+                    <button type="reset" class="btn btn-secondary">Clear</button>
+                </div>
+            </form>
+
+            <p style="margin-top: 30px; color: #999; font-size: 13px;">After you submit, we'll send you the full questionnaire and next steps via email.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 My Bespoke Desire. All stories are private and confidential. | <a href="mailto:contact@mybespokedesire.com">Contact</a> | <a href="#">Privacy</a></p>
+    </footer>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            const serviceType = document.getElementById('service-type').value;
+            const clientType = document.getElementById('client-type').value;
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+
+            // This would integrate with your email service (Mailchimp, ConvertKit, etc.)
+            alert(`Thank you, ${name}! We'll send you the full questionnaire to ${email} shortly.\n\nService: ${serviceType === 'bespoke' ? 'The Bespoke Story' : 'Russian Roulette'}\nType: ${clientType === 'couple' ? 'Couple' : 'Single'}`);
+
+            event.target.reset();
+        }
+    </script>
+</body>
+</html>
